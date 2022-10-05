@@ -1,0 +1,10 @@
+{% if app.user %}
+<div class="mb-3">
+  <h3>Bonjour {{ app.user.userIdentifier }}</h3> 
+</div>
+{% endif %}
+
+<h1 style= display:flex;justify-content:center;font-size:80px;>The Blog</h1>
+<h4>vous avez deja un compte ? <a href="/login">se connecter</a> </br>si vous n'avez pas de compte <a href="/register">s'enregister</a></h4>
+
+

@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello ArticlesController!{% endblock %}
+
+{% block body %}
+<style>
+    body{ background-color: rgb(126, 126, 183);display: flex;flex-wrap: wrap;}
+    .card { border: solid 1px; margin-bottom: 20px !important;border-radius: 5px;width:30%; margin: auto;max-height: 200px;min-height: 200px;overflow: hidden; overflow: scroll;}
+    .art { display:flex; margin:  auto;  width: 95%;justify-content: center; padding: 1%;}
+    .example-wrapper { display:flex; margin:  auto;  width: 95%;justify-content: center; padding: 1%;}
+    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+</style>
+
+<div class="example-wrapper">
+    <h1>Hello {{ app.user.userIdentifier }}! ✅</h1>
+</div>
+
+    {% for article in articles %} 
+    <div class="card">
+        <h3 class="art">{{ article.titre }}</h3> 
+    <div class="art">{{ article.texte }}</div> 
+</div>
+    {% endfor %}
+
+{% endblock %}
